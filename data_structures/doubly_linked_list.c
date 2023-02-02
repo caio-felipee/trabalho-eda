@@ -55,20 +55,3 @@ void insert_first_node(Doubly_linked_list *list, Item add) {
     list->first = n;
     list->size++;
 }
-
-int is_list_healthy(Doubly_linked_list *list) {
-    node *left = list->first;
-    node *right = list->last;
-
-    if(left->next == left || right->prev == right) // Temos um loop!
-        return 0;
-    
-    while(left != right) {
-        if(left->next == NULL || left->next->prev != left)
-            return 0;
-        
-        left->next = left;
-    }
-
-    return 1;
-}
