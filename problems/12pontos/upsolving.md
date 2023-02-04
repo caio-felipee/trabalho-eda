@@ -4,7 +4,7 @@ Consiste em um problema que envolve a Estrutura de Dados chamada fila, com algum
 
 Para a resolução, utilizamos alocação dinâmica. Porém, isto é algo totalmente opcional, uma vez que são entregues o número de queries realizadas e, portanto, o tamanho máximo da fila.
 
-No decorrer da questão, enfrentamos alguns problemas pelo método que decidimos seguir. Um deles, por exemplo, foi o erro da chamada de uma função implícita. As funções, ao depender da reversibilidade, chamavam umas as outras e para isto, elas devem estar definidas logo no início. Para estas chamadas não cairem em um loop, utilizamos a variável `called_directly`, no qual armazenavam o valor `1` caso convocado pela *main*.
+No decorrer da questão, enfrentamos alguns problemas pelo método que decidimos seguir. Um deles, por exemplo, foi o erro da chamada de uma função implícita. As funções, ao depender da reversibilidade, chamavam umas as outras e para isto, elas devem estar definidas logo no início. Para estas chamadas não cairem em um loop, utilizamos a variável `called_directly`, no qual armazenavam o valor `1` caso convocado diretamente pela *main*.
 
 ```c
 typedef int Item;
